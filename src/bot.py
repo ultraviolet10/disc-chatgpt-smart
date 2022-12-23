@@ -17,13 +17,9 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.guild.id == 1055780464507502592:
-        print('in')
-        print(message.content)
         if message.author == client.user:
-            print('not here')
             return
         if message.content.startswith('$hello'):
-            print('true')
             await message.channel.send('Hello.')
 
 
